@@ -30,3 +30,18 @@ def test_highest_after_tax_salary_should_be_81():
         givenSalaries, givenTaxation
     )
     assert actualHighestNetIncome == 81
+
+
+def test_getting_outlier_days():
+    data = np.array(
+        [
+            [815, 70, 115],
+            [767, 80, 50],
+            [912, 74, 77],
+            [554, 88, 70],
+            [1008, 65, 128],
+        ]
+    )
+    actual = npol.get_outlier_days(data)
+    expected = np.array([[1008, 65, 128]])
+    assert np.array_equal(actual, expected)
