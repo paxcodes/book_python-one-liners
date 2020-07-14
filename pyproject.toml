@@ -17,3 +17,6 @@ pylama = "^7.7.1"
 [build-system]
 requires = ["poetry>=1.0"]
 build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length=79
