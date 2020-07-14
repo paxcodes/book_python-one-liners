@@ -2,13 +2,17 @@
 name = "python-one-liners"
 version = "0.1.0"
 description = ""
-authors = ["Margret `Pax` Williams <pax.margret@gmail.com>"]
+authors = ["Pax <pax.margret@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+numpy = "^1.19.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4"
+bandit = "^1.6.2"
+black = {version = "^19.10b0", allow-prereleases = true}
+pylama = "^7.7.1"
 
 [build-system]
 requires = ["poetry>=1.0"]
