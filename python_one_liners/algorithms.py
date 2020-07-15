@@ -46,3 +46,13 @@ def get_levenshtein_distance(w1, w2):
             get_levenshtein_distance(w1, w2[1:]) + 1,
         )
     )
+
+
+def get_powerset(aSet):
+    powerset = [set()]
+    while aSet:
+        x = aSet.pop()
+        subsets = [subset | {x} for subset in powerset]
+        powerset += subsets
+    return powerset
+    # return reduce(lambda P, x: P + [subset | {x} for subset in P], aSet, [set()])

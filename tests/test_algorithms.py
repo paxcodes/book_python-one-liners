@@ -29,3 +29,18 @@ def test_permutations_factorial():
 
 def test_levenshtein_distance():
     assert al.get_levenshtein_distance("cat", "chello") == 5
+
+
+def test_powerset():
+    assert al.get_powerset(set([1])) == [set(), {1}]
+    assert al.get_powerset(set([1, 2])) == [set(), {1}, {2}, {1, 2}]
+    assert al.get_powerset({1, 2, 3}) == [
+        set(),
+        {1},
+        {2},
+        {1, 2},
+        {3},
+        {1, 3},
+        {2, 3},
+        {1, 2, 3},
+    ]
