@@ -32,3 +32,17 @@ def get_factorial(num):
         num -= 1
     return factorial
     # return 1 if num <= 1 else get_factorial(num - 1) * num
+
+
+def get_levenshtein_distance(w1, w2):
+    return (
+        len(w1)
+        if not w2
+        else len(w2)
+        if not w1
+        else min(
+            get_levenshtein_distance(w1[1:], w2[1:]) + (w1[0] != w2[0]),
+            get_levenshtein_distance(w1[1:], w2) + 1,
+            get_levenshtein_distance(w1, w2[1:]) + 1,
+        )
+    )

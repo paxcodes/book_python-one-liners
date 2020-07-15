@@ -25,3 +25,7 @@ def test_permutations_factorial():
     assert al.get_factorial(2) == 2
     assert al.get_factorial(3) == 6
     assert al.get_factorial(10) == 3628800
+
+
+def test_levenshtein_distance():
+    assert al.get_levenshtein_distance("cat", "chello") == 5
