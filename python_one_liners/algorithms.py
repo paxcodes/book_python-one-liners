@@ -19,3 +19,16 @@ def is_anagram_through_histogramming(string1, string2):
         histogram2[char] = histogram2.get(char, 1)
 
     return histogram1 == histogram2
+
+
+def is_palindrome(word):
+    return word == word[::-1]
+
+
+def get_factorial(num):
+    factorial = 1
+    while num > 1:
+        factorial *= num
+        num -= 1
+    return factorial
+    # return 1 if num <= 1 else get_factorial(num - 1) * num
